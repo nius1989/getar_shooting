@@ -1,0 +1,57 @@
+<%= form_with(model: tweet, local: true) do |form| %>
+  <% if tweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
+
+      <ul>
+      <% tweet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dc_title_s %>
+    <%= form.text_field :dc_title_s%>
+  </div>
+
+  <div class="field">
+    <%= form.label :dc_identifier_s %>
+    <%= form.text_field :dc_identifier_s %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layer_slug_s %>
+    <%= form.text_field :layer_slug_s%>
+  </div>
+
+  <div class="field">
+    <%= form.label :dc_description_s %>
+    <%= form.text_area :dc_description_s%>
+  </div>
+
+  <div class="field">
+    <%= form.label :solr_geom %>
+    <%= form.text_field :solr_geom%>
+  </div>
+
+  <div class="field">
+    <%= form.label :dct_provenance_s %>
+    <%= form.text_field :dct_provenance_s%>
+  </div>
+
+  <div class="field">
+    <%= form.label :dc_rights_s %>
+    <%= form.text_field :dc_rights_s%>
+  </div>
+
+  <div class="field">
+    <%= form.label :geoblacklight_version %>
+    <%= form.text_field :geoblacklight_version%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

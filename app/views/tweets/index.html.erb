@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dc title s</th>
+      <th>Dc identifier s</th>
+      <th>Layer slug s</th>
+      <th>Dc description s</th>
+      <th>Solr geom</th>
+      <th>Dct provenance s</th>
+      <th>Dc rights s</th>
+      <th>Geoblacklight version</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td><%= tweet.dc_title_s %></td>
+        <td><%= tweet.dc_identifier_s %></td>
+        <td><%= tweet.layer_slug_s %></td>
+        <td><%= tweet.dc_description_s %></td>
+        <td><%= tweet.solr_geom %></td>
+        <td><%= tweet.dct_provenance_s %></td>
+        <td><%= tweet.dc_rights_s %></td>
+        <td><%= tweet.geoblacklight_version %></td>
+        <td><%= link_to 'Show', tweet %></td>
+        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tweet', new_tweet_path %>

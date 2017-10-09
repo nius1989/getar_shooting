@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dc_title_s: MyText
+  dc_identifier_s: MyText
+  layer_slug_s: MyText
+  dc_description_s: MyText
+  solr_geom: MyText
+  dct_provenance_s: MyText
+  dc_rights_s: MyText
+  geoblacklight_version: MyText
+
+two:
+  dc_title_s: MyText
+  dc_identifier_s: MyText
+  layer_slug_s: MyText
+  dc_description_s: MyText
+  solr_geom: MyText
+  dct_provenance_s: MyText
+  dc_rights_s: MyText
+  geoblacklight_version: MyText
